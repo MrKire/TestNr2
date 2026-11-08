@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.794" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-08T17:42:28" tests="0" file="cypress/e2e/1-getting-started/todo.feature" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Todo list" timestamp="2026-11-08T17:42:28" tests="6" time="3.791" failures="0">
+    <testcase name="Todo list Display the default todo items" time="0.457" classname="Display the default todo items">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+Then I should see 2 todo items [passed]
+Then the first todo item should be "Pay electric bill" [passed]
+Then the last todo item should be "Walk the dog" [passed]</system-out></testcase>
+    <testcase name="Todo list Add a todo item" time="0.342" classname="Add a todo item">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+When I add a todo item "Feed the cat" [passed]
+Then I should see 3 todo items [passed]
+And the last todo item should be "Feed the cat" [passed]</system-out></testcase>
+    <testcase name="Todo list Complete a todo item" time="0.233" classname="Complete a todo item">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+When I mark "Pay electric bill" as completed [passed]
+Then "Pay electric bill" should be marked as completed [passed]</system-out></testcase>
+    <testcase name="Todo list Filter completed and active todo items (example #1)" time="0.383" classname="Filter completed and active todo items (example #1)">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+Given I mark "Pay electric bill" as completed [passed]
+When I filter todo items by "Active" [passed]
+Then I should see 1 todo item "Walk the dog" [passed]
+And I should not see the todo item "Pay electric bill" [passed]</system-out></testcase>
+    <testcase name="Todo list Filter completed and active todo items (example #2)" time="0.321" classname="Filter completed and active todo items (example #2)">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+Given I mark "Pay electric bill" as completed [passed]
+When I filter todo items by "Completed" [passed]
+Then I should see 1 todo item "Pay electric bill" [passed]
+And I should not see the todo item "Walk the dog" [passed]</system-out></testcase>
+    <testcase name="Todo list Delete all completed todo items" time="0.323" classname="Delete all completed todo items">
+    <system-out>Cucumber steps:
+Given I open the todo app [passed]
+Given I mark "Pay electric bill" as completed [passed]
+When I clear completed todo items [passed]
+Then I should see 1 todo item [passed]
+And I should not see the todo item "Pay electric bill" [passed]
+And the clear completed button should not be visible [passed]</system-out></testcase>
+  </testsuite>
+</testsuites>
