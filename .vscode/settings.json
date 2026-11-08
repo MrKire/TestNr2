@@ -1,0 +1,5 @@
+{
+  "cucumberautocomplete.steps": [
+    "cypress/e2e/1-getting-started/todo.js"
+  ]
+}
